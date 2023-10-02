@@ -1,0 +1,37 @@
+cpp
+import sys
+
+MAX = sys.maxsize // 2
+
+class Station:
+    def __init__(self, distance, price):
+        self.distance = distance
+        self.price = price
+
+case_num = int(input())
+input()
+for cases in range(1, case_num + 1):
+    t = int(input())
+    input()
+    n = 1
+    s = [Station(0, 0)]
+    while True:
+        buf = input().strip()
+        if not buf:
+            break
+        distance, price = map(int, buf.split())
+        s.append(Station(distance, price))
+        n += 1
+    
+    s.append(Station(t, MAX))
+    
+    dp = [[MAX] * 201 for _ in range(n + 1)]
+    dp[0][100] = 0
+    for i in range(1, n + 1):
+        d = s[i].distance - s[i - 1].distance
+        for j in range(d, 201):
+            dp[i][j - d] = dp[i - 1][j]
+        for j in range(1, 201):
+            dp[i][j] = min(dp[i][j], dp[i][j - 1] + s[i].price)
+    
+    ans = MAX

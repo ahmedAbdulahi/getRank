@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+body{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 1.4;
+	color: #fff;
+	background-color: #1f2029;
+	
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg');
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 4%;
+ 
+}
+
+.center-container {
+    display: flex;
+    flex-direction: row; /* Change to a horizontal layout */
+    justify-content: space-between; /* Spread elements horizontally */
+    align-items: center; /* Vertically align items */
+    text-align: center;
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 300px;
+    overflow: hidden;
+}
+
+
+
+
+.custom-input {
+    width: 400px; /* Increase the width */
+    height: 50px; /* Increase the height */
+    font-size: 20px; /* Increase the font size */
+}
+
+.center-button {
+     margin: 20px auto;
+  
+    border: 2px #2a2f3b solid;
+    border-radius: 0.5em;
+    padding: 1em;
+    font-size: 18px; /* Increase the font size */
+    background: #2a2f3b;
+    color:#fff;
+    border: none;
+    display: none;
+    
+   
+}
+
+.center-button:hover {
+    background:#323741;
+}
+
+
+
+
+.dropdown {
+    min-width: 15em;
+    position: relative;
+    margin: 2em;
+
+  }
+
+.dropdown *{
+    box-sizing: border-box;
+}
+
+.select{
+    background: #2a2f3b;
+    color:#fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px #2a2f3b solid;
+    border-radius: 0.5em;
+    padding: 1em;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.select-clicked{
+    border: 2px #26498a solid;
+    box-shadow: 0 0 0.8em #26489a;
+}
+
+.select:hover{
+    background:#323741;
+}
+  
+.caret{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
+    transition: 0.3s;
+
+}
+
+.caret-rotate{
+    transform: rotate(180deg);
+}
+
+.menu{
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background: #323741;
+    border: 1px #363a43 solid;
+    box-shadow: 0 0.5em 1em rgba(0,0,0,0.2);
+    border-radius: 0.5em;
+    color: #9fa5b5;
+    position: absolute;
+    top: 3em;
+    left:50%;
+    width: 100%;
+    transform: translateX(-50%);
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index: 1;
+
+}
+
+.menu li{
+    padding: 0.7em 0.5em;
+    margin: 0.3em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+
+}
+
+.menu li:hover{
+    background: #2a2d35;
+}
+
+.active{
+    background: #23242a;
+}
+
+.menu-open{
+    display: block;
+    opacity: 1;
+}
+
+.consoleOutput{
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 30px;
+}
